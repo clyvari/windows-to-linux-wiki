@@ -34,3 +34,12 @@ There might be other perms to change in order to harden VS
   set -eu
   flatpak-spawn --host podman-compose "$@"
   ```
+
+### Configure VSCode
+* `Extensions`
+    * `Dev Containers`
+        * `Docker Compose Path`: `/home/$(whoami)/.local/bin/podman-compose`
+        * `Docker Path`: `home/$(whoami)/.local/bin/podman`
+        * `Docker Socket Path`: `/run/user/$(id -u)/podman/podman.sock`
+
+Don't actually use `$(...)` in the config, replace by the command value
