@@ -43,3 +43,6 @@ There might be other perms to change in order to harden VS
         * `Docker Socket Path`: `/run/user/$(id -u)/podman/podman.sock`
 
 Don't actually use `$(...)` in the config, replace by the command value
+
+### Start a dev container
+Ensure `/tmp/vsch-$(whoami)` exists on host
