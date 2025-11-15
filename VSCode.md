@@ -4,7 +4,7 @@ Goal is to use vscode with devcontainers to isolate dev
 
 
 ### Install VSCode flatpack
-flatpak install flathub com.visualstudio.code
+`flatpak install flathub com.visualstudio.code`
 
 ### Configure permissions with FlatSeal
 * ~~Uncheck `Filesystem > All system files`~~
@@ -18,5 +18,19 @@ There might be other perms to change in order to harden VS
 * `Remote - SSH: Editing Configuration Files`
 
 ### Install podman
-`sudo apt install podman`
-Enable socket: `systemctl --user enable --now podman.socket`, which creates `/var/run/user/$(id -u)/podman/podman.sock`
+* `sudo apt install podman`
+* Enable socket: `systemctl --user enable --now podman.socket`, which creates `/var/run/user/$(id -u)/podman/podman.sock`
+
+### Add podman scripts to VSCode:
+* `~/.var/app/com.visualstudio.code/.local/bin/podman`:
+  ```shell
+  #!/bin/bash
+  set -eu
+  flatpak-spawn --host podman "$@"
+  ```
+* `~/.var/app/com.visualstudio.code/.local/bin/podman-compose`:
+  ```shell
+  #!/bin/bash
+  set -eu
+  flatpak-spawn --host podman-compose "$@"
+  ```
