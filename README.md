@@ -9,13 +9,19 @@ This will be mostly tailored for my own usage and workflows, but I will make thi
 1. [Linux Distribution](#linux-distribution)
 1. [Install](#install-debian)
 1. [Configuring the system](#configuring-the-system)
+1. [Programming](#programming)
+1. [Gaming](#gaming)
 
 # TODO
 * Debian 13.x
 * Config Wooting KB
 * "Bitlocker" encryption
+* Separate /home partition
 * Test other desktop environments
 * Windows VM
+* Check hardware accel / iGPU config
+* dGPU config
+* VFIO
 
 # Current Issues
 #### Bitlocker
@@ -67,3 +73,11 @@ See: [Screen Refresh Rate](#screen-refresh-rate)
 
 #### GPU
 Check if iGPU is correctly configured
+
+# Programming
+### .NET / Visual Studio
+
+# Gaming
+### Native Games
+### Steam
+### Windows only
