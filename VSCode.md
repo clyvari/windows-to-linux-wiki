@@ -8,7 +8,7 @@ Goal is to use vscode with devcontainers to isolate dev
 
 ### Configure permissions with FlatSeal
 * ~~Uncheck `Filesystem > All system files`~~
-* Add in `Filesystem > Other files`: `/tmp/vsch-$(whoami)`
+* Add in `Filesystem > Other files`: `/tmp/vsch-$(whoami)`. `/tmp/devcontainercli-$(whoami)`
 * Add in `Persistent > Files`: `.local/bin`, `.vscode`
 There might be other perms to change in order to harden VS
 
