@@ -12,11 +12,11 @@ Goal is to use vscode with devcontainers to isolate dev
 * Add in `Persistent > Files`: `.local/bin`, `.vscode`
 There might be other perms to change in order to harden VS
 
-### systemd-tmpfiles - /etc/tmpfiles.d/vscode-folders-${USER}
+### systemd-tmpfiles - ~/.config/user-tmpfiles.d
 ```
-# Type  Path                          Mode  User     Group    Age  Argument
-  d     /tmp/vsch-${USER}             0755  ${USER}  ${USER}  -    -
-  d     /tmp/devcontainercli-${USER}  0755  ${USER}  ${USER}  -    -
+# Type  Path                     Mode  User  Group  Age  Argument
+  d-    /tmp/vsch-%u             0755  -     -      -    -
+  d-    /tmp/devcontainercli-%u  0755  -     -      -    -
 ```
 
 ### Install VS Extensions:
